@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yagy | Portfolio</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --text: #171717;
+      --muted: #666;
+      --card: #ffffff;
+      --border: #e6e6e6;
+      --accent: #111827;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .hero {
+      min-height: 70vh;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      max-width: 1040px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-content {
+      max-width: 1040px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 10vw, 7rem);
+      line-height: 1;
+      margin: 16px 0;
+    }
+
+    .lead {
+      max-width: 620px;
+      font-size: 1.25rem;
+      color: var(--muted);
+    }
+
+    .actions {
+      margin-top: 32px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-weight: 600;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .section {
+      margin-top: 80px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 28px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    .tag {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin: 0 0 8px;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      margin: 0 0 12px;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-weight: 700;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .chips span {
+      padding: 8px 14px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+    }
+
+    footer {
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 720px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 72px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Yagy</div>
+      <a href="https://github.com/yagiy-35" target="_blank">GitHub</a>
+    </nav>
+
+    <section class="hero-content">
+      <p class="eyebrow">Portfolio</p>
+      <h1>Yagy</h1>
+      <p class="lead">小さく使えて、日常に残るアプリを作っています。</p>
+      <div class="actions">
+        <a class="button" href="#works">制作物を見る</a>
+        <a class="button secondary" href="https://github.com/yagiy-35?tab=repositories" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="section">
+      <h2>About</h2>
+      <p>
+        Java、Pythonなどを使って、日々の作業や記録を少し楽にするためのアプリを制作しています。
+      </p>
+    </section>
+
+    <section id="works" class="section">
+      <h2>Works</h2>
+
+      <div class="grid">
+        <article class="card">
+          <p class="tag">Task Management</p>
+          <h3>タスク管理アプリ</h3>
+          <p>
+            最も優先度の高いタスクだけを表示し、目の前の作業に集中するためのタスク管理アプリ。
+          </p>
+          <a href="#" class="text-link">詳細を見る</a>
+        </article>
+
+        <article class="card">
+          <p class="tag">Memo</p>
+          <h3>メモアプリ</h3>
+          <p>
+            思いついたことを素早く残すための、シンプルなメモアプリ。
+          </p>
+          <a href="#" class="text-link">詳細を見る</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Tech Stack</h2>
+      <div class="chips">
+        <span>Java</span>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>GitHub Pages</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Yagy</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
